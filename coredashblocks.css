@@ -55,7 +55,7 @@
 }
 
 /*-- DASHBOARD - POST TYPES AND STATUSES MODULE */
-.dashboard .post-types-and-statuses-module .modulecore{
+.dashboard .block-type-post_types_statuses .modulecore{
 	overflow: auto;
 }
 

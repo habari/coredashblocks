@@ -2,10 +2,10 @@
 <?php if ( !defined( 'HABARI_PATH' ) ) { die( 'No direct access' ); }
 
 /**
- * CoreDashModules - Provides a core set of dashboard modules for the dashboard.
+ * CoreDashBlocks - Provides a core set of blocks for the dashboard.
  */
 
-class CoreDashModules extends Plugin
+class CoreDashBlocks extends Plugin
 {
 	private $theme;
 
@@ -200,12 +200,12 @@ order by
 	}
 
 	/**
-	 * filter_dash_module_post_types
+	 * filter_dash_block_post_types
 	 * Function used to set theme variables to the post types dashboard widget
-	 * @param string $module_id
-	 * @return string The contents of the module
+	 * @param string $block_id
+	 * @return string The contents of the block
 	 */
-	public function filter_dash_module_post_types_and_statuses( $module, $module_id, $theme )
+	public function filter_dash_block_post_types_and_statuses( $block, $block_id, $theme )
 	{
 		$messages = array();
 		$user = User::identify();
@@ -266,9 +266,9 @@ order by
 
 		$theme->type_messages = $messages;
 
-		$module['title'] = _t( 'Post Types and Statuses' );
-		$module['content'] = $theme->fetch( 'dash_posttypes' );
-		return $module;
+		$block['title'] = _t( 'Post Types and Statuses' );
+		$block['content'] = $theme->fetch( 'dash_posttypes' );
+		return $block;
 	}
 
 	/**
@@ -280,7 +280,7 @@ order by
 	{
 		$vars = Controller::get_handler_vars();
 		if( 'dashboard' == $theme->page ) {
-			Stack::add( 'admin_stylesheet', array( $this->get_url() . '/coredashmodules.css', 'screen' ), 'coredashmodules', array( 'admin-css' ) );
+			Stack::add( 'admin_stylesheet', array( $this->get_url() . '/coredashblocks.css', 'screen' ), 'coredashblocks', array( 'admin-css' ) );
 		}
 	}
 
