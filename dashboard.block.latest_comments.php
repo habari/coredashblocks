@@ -7,7 +7,7 @@ if ( !defined( 'HABARI_PATH' ) ) { die( 'No direct access' ); }
 		<?php foreach ( $content->latestcomments_posts as $post ): ?>
 		<li class="item">
 			<span class="comments"><a href="<?php echo $post->permalink; ?>#comments" title="<?php printf(_n('%1$d comment', '%1$d comments', $post->comments->approved->comments->count), $post->comments->approved->comments->count); ?>"><?php echo $post->comments->approved->comments->count; ?></a></span>
-			<span class="titleanddate"><a href="<?php echo $post->permalink; ?>" class="title"><?php echo $post->title; ?></a> <?php $post->pubdate->out( 'M j' ); ?></span>
+			<span class="titleanddate"><span class="title"><a href="<?php echo $post->permalink; ?>" class="title"><?php echo $post->title; ?></a></span> <span class="date"><?php $post->pubdate->out( 'M j' ); ?></span></span>
 			<ul class="commentauthors">
 				<?php
 				$comment_count = 0;

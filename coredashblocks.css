@@ -8,7 +8,7 @@
 /*-- DASHBOARD - LATEST COMMENTS MODULE */
 
 .dashboard .block-type-latest_comments .item {
-
+	padding: 5px 0px 0px 0px;
 }
 
 .dashboard .block-type-latest_comments .item > span {
@@ -16,29 +16,38 @@
 }
 
 .dashboard .block-type-latest_comments .titleanddate {
-	margin-top: 5px;
+
 	line-height: 16px;
+	max-width: 90%;
+}
+
+.dashboard .block-type-latest_comments .title {
+	overflow: hidden;
+	max-width: 100%;
+}
+
+.dashboard .block-type-latest_comments .date {
 	color: #999;
 }
 
 .dashboard .block-type-latest_comments ul {
-	margin-bottom: 5px;
+	margin: 0px;
 	line-height: 13px;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
+	clear: left;
+	width: 100%;
+}
+
+.dashboard .block-type-latest_comments ul.commentauthors {
+	width: auto;
 }
 
 .dashboard .block-type-latest_comments ul.commentauthors li {
 	display: inline;
-}
-
-.dashboard .block-type-latest_comments ul li:after {
-	content: ', ';
-}
-
-.dashboard .block-type-latest_comments ul li.last-child:after {
-	content: '';
+	padding: 0px;
+	width: auto;
 }
 
 .dashboard .block-type-latest_comments .commentauthors a:hover {
