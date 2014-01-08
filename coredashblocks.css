@@ -64,7 +64,19 @@
 }
 
 /*-- DASHBOARD - POST TYPES AND STATUSES MODULE */
-.dashboard .block-type-post_types_statuses .modulecore{
-	overflow: auto;
+
+.dashboard .block-type-post_types_statuses .modulecore li .user {
+	width: 15%;
+	text-align: center;
+	float: left;
 }
 
+.dashboard .block-type-post_types_statuses .modulecore li .site {
+	width: 15%;
+	text-align: center;
+	float: right;
+}
+
+.dashboard .block-type-post_types_statuses .modulecore li .title {
+	width: 70%;
+}
